@@ -10,8 +10,8 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-if prompt := st.chat_input("Add your comment"):
+if user_input := st.chat_input("Add your comment"):
     # Display user message in chat message container
-    st.chat_message("user").markdown(prompt)
+    st.chat_message("user").markdown(user_input)
     # Add user message to chat history
-    st.session_state.messages.append({"role": "user", "content": prompt})
+    st.session_state.messages.append({"role": "user", "content": user_input})
