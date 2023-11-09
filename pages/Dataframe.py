@@ -2,6 +2,7 @@ import random
 from datetime import datetime, timedelta
 
 import streamlit as st
+from streamlit_extras.switch_page_button import switch_page c
 import pandas as pd
 import numpy as np
 
@@ -32,6 +33,7 @@ def dataframe_with_selections(df):
         first_selection = int(selected_indices[0])
         st.write("FIRST", first_selection)
         st.session_state["Animal"] = df_with_selections.iloc[first_selection, :]["Animal"]
+        switch_page("Plot")
 
     return {"selected_rows_indices": selected_indices, "selected_rows": selected_rows}
 
