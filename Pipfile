@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+streamlit = "1.28.0"
+plotly = "*"
+streamlit-extras = "*"
+streamlit-aggrid = "*"
+pyyaml = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
